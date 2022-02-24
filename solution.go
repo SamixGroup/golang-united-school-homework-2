@@ -25,7 +25,7 @@ func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
 		return math.Pi * math.Pow(sideLen, 2)
 	case SidesTriangle:
 		var sum = (3 * sideLen) / 2
-		return math.Sqrt(3 * sum * (sum - sideLen))
+		return math.Sqrt(sum * math.Pow((sum - sideLen),3))
 	default:
 		return 0
 	}
